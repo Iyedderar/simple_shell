@@ -6,7 +6,7 @@
 
 alias_t *addalias_end(alias_t **hd, char *name, char *val);
 void freealias_list(alias_t *hd);
-list_t *add_nd_end(list_t **hd, char *dir);
+list_t *addnode_end(list_t **hd, char *dir);
 void free_list(list_t *hd);
 
 /**

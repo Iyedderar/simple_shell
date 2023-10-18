@@ -90,7 +90,7 @@ int proc_flie_cmnd(char *flie_pth, int *exe_ret)
 		}
 	}
 	variable_rp(&lns, exe_ret);
-	handle_ln(&lns, lns_size);
+	hndle_ln(&lns, lns_size);
 	rgs = _strtok(lns, " ");
 	free(lns);
 	if (!rgs)

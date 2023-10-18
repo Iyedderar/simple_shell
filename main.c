@@ -103,7 +103,7 @@ int main(int argc, char *argv[])
 
 	if (argc != 1)
 	{
-		ret = proc_file_commands(argv[1], exe_ret);
+		ret = proc_flie_cmnd(argv[1], exe_ret);
 		free_env();
 		freealias_list(aliases);
 		return (*exe_ret);
@@ -112,7 +112,7 @@ int main(int argc, char *argv[])
 	if (!isatty(STDIN_FILENO))
 	{
 		while (ret != END_OF_FILE && ret != EXIT)
-			ret = handle_args(exe_ret);
+			ret = handle_rgs(exe_ret);
 		free_env();
 		freealias_list(aliases);
 		return (*exe_ret);
@@ -121,7 +121,7 @@ int main(int argc, char *argv[])
 	while (1)
 	{
 		write(STDOUT_FILENO, prmpt, 2);
-		ret = handle_args(exe_ret);
+		ret = handle_rgs(exe_ret);
 		if (ret == END_OF_FILE || ret == EXIT)
 		{
 			if (ret == END_OF_FILE)

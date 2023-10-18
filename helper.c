@@ -5,7 +5,7 @@
 #include "shell.h"
 
 void free_rgs(char **rgs, char **fnt);
-char *getpid(void);
+char *_getpid(void);
 char *getent_val(char *start, int lnth);
 void variable_rp(char **rgs, int *exe_rp);
 
@@ -25,7 +25,7 @@ void free_rgs(char **rgs, char **fnt)
 }
 
 /**
- * getpid - Get the process ID.
+ * _getpid - Get the process ID.
  * Description: Open a stat file, a space-delimited file that contain
  *              the information of the process. The PID is the
  *              first word in the file. The function read the PID
@@ -33,7 +33,7 @@ void free_rgs(char **rgs, char **fnt)
  *
  * Return: The process ID or NULL.
  */
-char *getpid(void)
+char *_getpid(void)
 {
 	size_t ik = 0;
 	char *bffr;
@@ -119,7 +119,7 @@ void variable_rp(char **line, int *exe_rp)
 		{
 			if (old_line[jk + 1] == '$')
 			{
-				replacement = getpid();
+				replacement = _getpid();
 				kk = jk + 2;
 			}
 			else if (old_line[jk + 1] == '?')

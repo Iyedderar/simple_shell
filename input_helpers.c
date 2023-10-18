@@ -40,7 +40,7 @@ char *get_rgs(char *lns, int *exe_ret)
 
 	lns[rd - 1] = '\0';
 	variable_rp(&lns, exe_ret);
-	handle_ln(&lns, rd);
+	hndle_ln(&lns, rd);
 
 	return (lns);
 }
@@ -162,7 +162,7 @@ int handle_rgs(int *exe_ret)
 	if (check_rgs(rgs) != 0)
 	{
 		*exe_ret = 2;
-		free_args(rgs, rgs);
+		free_rgs(rgs, rgs);
 		return (*exe_ret);
 	}
 	fnt = rgs;

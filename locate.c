@@ -130,7 +130,7 @@ list_t *getpath_dir(char *pth)
 
 	for (index = 0; dirs[index]; index++)
 	{
-		if (add_node_end(&hd, dirs[index]) == NULL)
+		if (add_nd_end(&hd, dirs[index]) == NULL)
 		{
 			free_list(hd);
 			free(dirs);
