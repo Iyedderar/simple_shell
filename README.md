@@ -34,3 +34,5 @@ You have to handle the command cd -
 You have to update the environment variable PWD when you change directory
 
 12 task : Handle the commands separator ;
+
+13 task : Handle the && and || shell logical operators
