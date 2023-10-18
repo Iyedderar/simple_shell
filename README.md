@@ -13,3 +13,14 @@ You are not allowed to use getline
 8 task : Simple shell 0.2 +
 9 task : handle arguments for the built-in exit
 Usage: exit status, where status is an integer used to exit the shell
+
+10 task : mplement the setenv and unsetenv builtin commands
+
+setenv
+Initialize a new environment variable, or modify an existing one
+Command syntax: setenv VARIABLE VALUE
+Should print something on stderr on failure
+unsetenv
+Remove an environment variable
+Command syntax: unsetenv VARIABLE
+Should print something on stderr on failure
