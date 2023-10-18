@@ -59,7 +59,7 @@ typedef struct alias_s
 /* Global aliases linked list */
 alias_t *aliases;
 
-/* Main Helpers */
+/* Main Utilties */
 ssize_t _getline(char **lineptr, size_t *n, FILE *stream);
 void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size);
 char **_strtok(char *line, char *delim);
@@ -69,7 +69,7 @@ int execute(char **args, char **front);
 void free_list(list_t *head);
 char *_itoa(int num);
 
-/* Input Helpers */
+/* Input Utilties */
 void hndle_ln(char **line, ssize_t read);
 void variable_rp(char **args, int *exe_ret);
 char *get_rgs(char *line, int *exe_ret);
@@ -80,7 +80,7 @@ int check_rgs(char **args);
 void free_rgs(char **args, char **front);
 char **replace_aliases(char **args);
 
-/* String functions */
+/* String Utilties */
 int _strlen(const char *s);
 char *_strcat(char *dest, const char *src);
 char *_strncat(char *dest, const char *src, size_t n);
@@ -97,7 +97,7 @@ int shellby_env(char **args, char __attribute__((__unused__)) **front);
 int shellby_setenv(char **args, char __attribute__((__unused__)) **front);
 int shellby_alias(char **args, char __attribute__((__unused__)) **front);
 
-/* Builtin Helpers */
+/* Builtin HUtilties */
 char **_copyenv(void);
 void free_env(void);
 char **_getenv(const char *var);
@@ -112,7 +112,7 @@ char *error_2_syntax(char **args);
 char *error_126(char **args);
 char *error_127(char **args);
 
-/* Linkedlist Helpers */
+/* Linkedlist Utilties */
 alias_t *addalias_end(alias_t **head, char *name, char *value);
 void freealias_list(alias_t *head);
 list_t *add_nd_end(list_t **head, char *dir);
