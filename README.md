@@ -47,3 +47,5 @@ alias name='value' [...]: Defines an alias for each name whose value is given. I
 15 task : Handle variables replacement
 Handle the $? variable
 Handle the $$ variable
+
+16 task : Handle comments (#)
